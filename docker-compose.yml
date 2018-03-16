@@ -1,0 +1,62 @@
+version: '3'
+services:
+  grafana:
+    image: "grafana/grafana:4.6.3"
+    ports:
+      - "6001:3000"
+    environment:
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_USERS_ALLOW_ORG_CREATE=false
+    volumes:
+      - "grafana:/var/lib/grafana"
+    networks:
+      - labnet
+
+  jenkins:
+    image: "jenkins/jenkins:2.108-alpine"
+    ports:
+      - "6002:8080"
+    volumes:
+      - "jenkins:/var/jenkins_home"
+    networks:
+      - labnet
+
+  influxdb:
+    image: "influxdb:1.4"
+    ports:
+      - "6003:8086"
+    environment:
+      - INFLUXDB_DB=jenkins
+      - INFLUXDB_USER=admin
+      - INFLUXDB_USER_PASSWORD=admin
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin
+    volumes:
+      - "influxdb:/var/lib/influxdb"
+    networks:
+      - labnet
+
+  nifi:
+    image: "apache/nifi:1.5.0"
+    ports:
+      - "6004:6004"
+    environment:
+     - NIFI_WEB_HTTP_PORT=6004
+    networks:
+      - labnet
+
+  redis:
+    image: "redis:4-alpine"
+    volumes:
+      - "redis:/data"
+    networks:
+      - labnet
+
+networks:
+  labnet:
+
+volumes:
+  grafana:
+  influxdb:
+  jenkins:
+  redis:
