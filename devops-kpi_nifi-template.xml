@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.2">
-    <description>Join the jenkins_data and jenkins_custom_data, based on project_name and build_number and push them to devops_data.</description>
+    <description>DevOps KPI in Practice - Apache Nifi 1.5.0 - Template</description>
     <groupId>6896cca2-0161-1000-b9fc-db02628856d5</groupId>
     <name>devops-kpi_nifi-template</name>
     <snippet>
+        <connections>
+            <id>85577903-ad25-30b9-0000-000000000000</id>
+            <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
+                <id>5b9a00dd-9770-3a50-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <source>
+                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
+                <id>d5b3ffef-78df-3022-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
         <connections>
             <id>8baeb196-87fe-3275-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
@@ -21,6 +42,27 @@
             <source>
                 <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
                 <id>4b811275-1563-335d-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>8ef4ca49-497b-3ea8-0000-000000000000</id>
+            <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
+                <id>e385a444-c371-3d74-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>matched</selectedRelationships>
+            <source>
+                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
+                <id>3cc10d90-1404-313c-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
@@ -89,13 +131,34 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>c0698ab2-dcb9-3d77-0000-000000000000</id>
+            <id>bb1cf6b1-79ca-3335-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
                 <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
-                <id>e385a444-c371-3d74-0000-000000000000</id>
+                <id>7554a10f-b3d4-3787-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
+                <id>fa325951-06b7-38dd-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>c5ac7fb3-4515-310f-0000-000000000000</id>
+            <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
+                <id>3cc10d90-1404-313c-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -110,7 +173,7 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>c5ac7fb3-4515-310f-0000-000000000000</id>
+            <id>dacdf38a-4020-34fe-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
@@ -122,10 +185,10 @@
             <flowFileExpiration>0 sec</flowFileExpiration>
             <labelIndex>1</labelIndex>
             <name></name>
-            <selectedRelationships>success</selectedRelationships>
+            <selectedRelationships>matched</selectedRelationships>
             <source>
                 <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
-                <id>2906bb9b-c2e0-392a-0000-000000000000</id>
+                <id>3cc10d90-1404-313c-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
@@ -173,22 +236,22 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>e8dcfeb6-fb2e-330d-0000-000000000000</id>
+            <id>f3e06022-78ae-3d30-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
                 <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
-                <id>8f5e96a0-c79c-31ae-0000-000000000000</id>
+                <id>7fbc8e84-cf2c-32cd-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
             <labelIndex>1</labelIndex>
             <name></name>
-            <selectedRelationships>success</selectedRelationships>
+            <selectedRelationships>matched</selectedRelationships>
             <source>
                 <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
-                <id>fa325951-06b7-38dd-0000-000000000000</id>
+                <id>7554a10f-b3d4-3787-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
@@ -274,27 +337,6 @@
             <source>
                 <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
                 <id>dc2341e5-928d-303d-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>0c2c876d-1465-3bf6-0000-000000000000</id>
-            <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <destination>
-                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
-                <id>7fbc8e84-cf2c-32cd-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <name></name>
-            <selectedRelationships>success</selectedRelationships>
-            <source>
-                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
-                <id>fa325951-06b7-38dd-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
@@ -484,6 +526,27 @@
             <source>
                 <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
                 <id>14fdabc3-d00e-3411-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>6e905a84-16eb-391e-0000-000000000000</id>
+            <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
+                <id>8f5e96a0-c79c-31ae-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>matched</selectedRelationships>
+            <source>
+                <groupId>38d2d4c4-15fe-3320-0000-000000000000</groupId>
+                <id>7554a10f-b3d4-3787-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
@@ -769,16 +832,16 @@
             <id>e7f9abb0-371f-30ab-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1010.4305621293327</x>
-                <y>1778.1236516432516</y>
+                <x>1019.0521684932285</x>
+                <y>1613.544357637995</y>
             </position>
         </funnels>
         <processors>
             <id>82929bd7-8e84-33f4-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1128.6037833006892</x>
-                <y>209.71942327254055</y>
+                <x>1697.9017812661475</x>
+                <y>4.98949450165901</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -873,8 +936,8 @@
             <id>8f5e96a0-c79c-31ae-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1129.2526191348063</x>
-                <y>1123.2658459911486</y>
+                <x>1116.3648260846396</x>
+                <y>868.3473185874545</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -999,8 +1062,8 @@
             <id>9dcb23e5-ddf7-342a-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>650.8038940730762</x>
-                <y>1114.932006225923</y>
+                <x>612.6338134252533</x>
+                <y>861.3887839980102</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1128,8 +1191,8 @@
             <id>d5b3ffef-78df-3022-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>861.7310884613437</x>
-                <y>1915.910723242616</y>
+                <x>866.050814942427</x>
+                <y>1728.3880698623595</y>
             </position>
             <bundle>
                 <artifact>nifi-scripting-nar</artifact>
@@ -1263,7 +1326,7 @@ session.transfer(ffOut, REL_SUCCESS)
             </config>
             <name>Join the data and the custom</name>
             <relationships>
-                <autoTerminate>true</autoTerminate>
+                <autoTerminate>false</autoTerminate>
                 <name>failure</name>
             </relationships>
             <relationships>
@@ -1278,8 +1341,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>da8a2fca-2fa6-3ccb-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>636.1005533843306</x>
-                <y>1586.2374290372222</y>
+                <x>612.2699502755702</x>
+                <y>1334.128166770247</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1383,8 +1446,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>daf8dd05-7188-36f3-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1152.6327735065965</x>
-                <y>1586.913091330408</y>
+                <x>1136.8770605345549</x>
+                <y>1319.0889853134327</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1488,8 +1551,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>dc2341e5-928d-303d-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>612.2824190143842</x>
-                <y>247.88105181775654</y>
+                <x>0.6241486692956641</x>
+                <y>0.0</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1584,8 +1647,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>dcc9b8e3-43a2-3794-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>859.4823656282481</x>
-                <y>2341.8183341537406</y>
+                <x>868.1038499218314</x>
+                <y>2160.0315454127663</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1779,8 +1842,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>e385a444-c371-3d74-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>6.876046443192422</x>
-                <y>913.6870287505708</y>
+                <x>6.89389304146323</x>
+                <y>640.1270218546892</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1880,8 +1943,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>eada4c26-1176-38b4-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>0.0</x>
-                <y>1128.704303854901</y>
+                <x>7.187585367802058</x>
+                <y>856.5782569199569</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1962,8 +2025,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>f3716b77-d501-3e54-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>649.4082253908081</x>
-                <y>698.6374953990191</y>
+                <x>606.4075173015789</x>
+                <y>433.6811261984499</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -2020,7 +2083,7 @@ session.transfer(ffOut, REL_SUCCESS)
                     </entry>
                     <entry>
                         <key>Path Not Found Behavior</key>
-                        <value>ignore</value>
+                        <value>warn</value>
                     </entry>
                     <entry>
                         <key>Null Value Representation</key>
@@ -2036,7 +2099,7 @@ session.transfer(ffOut, REL_SUCCESS)
                 <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
                 <yieldDuration>1 sec</yieldDuration>
             </config>
-            <name>Extract the latest time</name>
+            <name>Fix the timestamp attr</name>
             <relationships>
                 <autoTerminate>true</autoTerminate>
                 <name>failure</name>
@@ -2057,8 +2120,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>fa325951-06b7-38dd-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1132.999482175745</x>
-                <y>905.3149004329207</y>
+                <x>1700.8635201802658</x>
+                <y>431.00123142766415</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -2119,7 +2182,7 @@ session.transfer(ffOut, REL_SUCCESS)
                 <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
                 <yieldDuration>1 sec</yieldDuration>
             </config>
-            <name>Store the latest time</name>
+            <name>Fix the timestamp attr</name>
             <relationships>
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
@@ -2132,8 +2195,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>faa0d0c4-92bf-37c8-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1142.3353223162214</x>
-                <y>0.0</y>
+                <x>1107.9382519223047</x>
+                <y>3.1934110728684573</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -2228,8 +2291,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>04d731ef-f9f0-3709-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>644.2758550649015</x>
-                <y>487.36676318689933</y>
+                <x>601.2750249053598</x>
+                <y>198.0334408613303</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -2512,8 +2575,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>14fdabc3-d00e-3411-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1131.1002847562895</x>
-                <y>480.60710530652864</y>
+                <x>1105.3069741279978</x>
+                <y>189.83994509033482</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -2796,8 +2859,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>1a0b986c-5133-3892-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1739.0372705214352</x>
-                <y>1117.2558356839431</y>
+                <x>1704.6399559868935</x>
+                <y>862.3373082802491</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -2878,8 +2941,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>2906bb9b-c2e0-392a-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>655.1918906538082</x>
-                <y>913.1665346004993</y>
+                <x>4.19411225207898</x>
+                <y>418.77754821243025</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -2953,8 +3016,8 @@ session.transfer(ffOut, REL_SUCCESS)
             <id>2d86d3f6-468f-3da6-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>862.3572109460929</x>
-                <y>2134.6633275070476</y>
+                <x>863.8090175053012</x>
+                <y>1939.9709353572598</y>
             </position>
             <bundle>
                 <artifact>nifi-scripting-nar</artifact>
@@ -3074,11 +3137,72 @@ session.transfer(ffOut, REL_SUCCESS)</value>
             <type>org.apache.nifi.processors.script.ExecuteScript</type>
         </processors>
         <processors>
+            <id>3cc10d90-1404-313c-0000-000000000000</id>
+            <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
+            <position>
+                <x>605.5628761896537</x>
+                <y>632.6333375766246</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.5.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Routing Strategy</key>
+                        <value>
+                            <name>Routing Strategy</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>timestamp</key>
+                        <value>
+                            <name>timestamp</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Routing Strategy</key>
+                        <value>Route to 'match' if all match</value>
+                    </entry>
+                    <entry>
+                        <key>timestamp</key>
+                        <value>${data_latest_time:isEmpty():not()}</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <name>Go ahead?</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>matched</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>unmatched</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+        </processors>
+        <processors>
             <id>3e47c65d-1179-3dc5-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>608.1054864953344</x>
-                <y>0.11401482825249332</y>
+                <x>597.7084161014177</x>
+                <y>3.3074259011209506</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3173,8 +3297,8 @@ session.transfer(ffOut, REL_SUCCESS)</value>
             <id>45cc7800-c0d3-3152-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1129.5742040136859</x>
-                <y>697.171102082116</y>
+                <x>1112.3845310807067</x>
+                <y>436.51697897529675</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3268,8 +3392,8 @@ session.transfer(ffOut, REL_SUCCESS)</value>
             <id>4b811275-1563-335d-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1134.547202217534</x>
-                <y>1332.9516430315757</y>
+                <x>1125.9612890501799</x>
+                <y>1086.6368753935067</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3330,11 +3454,76 @@ session.transfer(ffOut, REL_SUCCESS)</value>
             <type>org.apache.nifi.processors.standard.SplitJson</type>
         </processors>
         <processors>
+            <id>5b9a00dd-9770-3a50-0000-000000000000</id>
+            <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
+            <position>
+                <x>1451.37263289442</x>
+                <y>1668.3419737445602</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.5.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>log-level</key>
+                        <value>
+                            <name>log-level</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>log-prefix</key>
+                        <value>
+                            <name>log-prefix</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>log-message</key>
+                        <value>
+                            <name>log-message</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>log-level</key>
+                        <value>info</value>
+                    </entry>
+                    <entry>
+                        <key>log-prefix</key>
+                    </entry>
+                    <entry>
+                        <key>log-message</key>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <name>LogMessage</name>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.LogMessage</type>
+        </processors>
+        <processors>
             <id>5bd4a34b-2dfa-39ca-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1604.8007774734929</x>
-                <y>440.11396704650406</y>
+                <x>1702.3275352045762</x>
+                <y>231.08203632249752</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3398,8 +3587,8 @@ session.transfer(ffOut, REL_SUCCESS)</value>
             <id>5cb8ec6a-a3c2-31e3-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>652.2969335836234</x>
-                <y>1336.5462404976156</y>
+                <x>618.4286107483005</x>
+                <y>1090.1728180743903</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3463,8 +3652,8 @@ session.transfer(ffOut, REL_SUCCESS)</value>
             <id>6de7b9fb-ad0b-35eb-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>70.24594734704169</x>
-                <y>441.1311381100777</y>
+                <x>0.0</x>
+                <y>242.13692711263366</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3525,11 +3714,72 @@ session.transfer(ffOut, REL_SUCCESS)</value>
             <type>org.apache.nifi.processors.standard.LogMessage</type>
         </processors>
         <processors>
+            <id>7554a10f-b3d4-3787-0000-000000000000</id>
+            <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
+            <position>
+                <x>1116.1142212232205</x>
+                <y>632.7366259738458</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.5.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Routing Strategy</key>
+                        <value>
+                            <name>Routing Strategy</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>timestamp</key>
+                        <value>
+                            <name>timestamp</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Routing Strategy</key>
+                        <value>Route to 'match' if all match</value>
+                    </entry>
+                    <entry>
+                        <key>timestamp</key>
+                        <value>${custom_latest_time:isEmpty():not()}</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <name>Go ahead?</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>matched</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>unmatched</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+        </processors>
+        <processors>
             <id>7fbc8e84-cf2c-32cd-0000-000000000000</id>
             <parentGroupId>38d2d4c4-15fe-3320-0000-000000000000</parentGroupId>
             <position>
-                <x>1737.789040013112</x>
-                <y>902.5429369111398</y>
+                <x>1697.6561297754454</x>
+                <y>633.2849319683833</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3626,5 +3876,5 @@ session.transfer(ffOut, REL_SUCCESS)</value>
             <type>org.apache.nifi.processors.standard.ReplaceText</type>
         </processors>
     </snippet>
-    <timestamp>03/16/2018 20:15:42 UTC</timestamp>
+    <timestamp>03/20/2018 18:21:51 UTC</timestamp>
 </template>
